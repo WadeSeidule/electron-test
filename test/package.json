@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4",
+    "electron-is-dev": "^1.1.0",
+    "ms": "^2.1.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "0.9.x",
+    "wait-on": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "main": "public/main.js"
+}
